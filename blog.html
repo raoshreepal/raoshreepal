@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Us</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+ <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+      <!-- font awesome css -->
+      <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+<style>
+
+.contact_section {
+    padding: 60px 0;
+}
+.contact_taital {
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+.contact_taital_1 {
+    color: #007bff;
+}
+.mail_section_1 .form-group {
+    position: relative;
+}
+.mail_section_1 .form-control {
+    padding-left: 40px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    height: 50px;
+}
+.mail_section_1 textarea.form-control {
+    height: auto;
+}
+.mail_section_1 .form-group i {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    color: #007bff;
+}
+.send_bt button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.send_bt button:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
+</style>
+</head>
+     
+ <div class="contact_section">
+<!-- back to home button with proper style  -->
+ <div class="container">
+    <div class="back_to_home">
+        <a href="index.html" class="btn btn-primary" ><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </div>
+</div>
+<div class="blog_section layout_padding bg-light">
+   
+    <div class="container">
+        <!-- Title -->
+        <div class="row">
+            <div class="col-sm-12 text-center mb-5">
+                <h1 class="blog_taital">My <span class="blog_taital_1">Blog</span></h1>
+                <p class="blog_text">Latest updates, coding tips, and freelancing insights for developers and entrepreneurs.</p>
+            </div>
+        </div>
+
+        <!-- Blog Cards -->
+        <div class="row g-4">
+    <!-- Blog 1 -->
+    <div class="col-lg-4 col-md-6">
+        <div class="card blog-card h-100">
+            <div class="card-img-container">
+                <img src="images/rao-shreepal-coding-tips.png" class="card-img-top" alt="Coding Tips">
+            </div>
+            <div class="card-body">
+                <h6 class="blog-date">Feb 10, 2025</h6>
+                <h5 class="blog-title">5 Coding Practices for Clean Code</h5>
+                <p class="blog-desc">Learn the top techniques to keep your code readable and maintainable.</p>
+                <button class="see-more btn btn-primary" onclick="openModal('blog1')">
+                    See More <i class="bi bi-arrow-right-circle"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog 2 -->
+    <div class="col-lg-4 col-md-6">
+        <div class="card blog-card h-100">
+            <div class="card-img-container">
+                <img src="images/rao-shreepal-online-payment.png" class="card-img-top" alt="Payment Gateway">
+            </div>
+            <div class="card-body">
+                <h6 class="blog-date">Feb 08, 2025</h6>
+                <h5 class="blog-title">Integrating Razorpay in Your Website</h5>
+                <p class="blog-desc">Step-by-step guide to integrate Razorpay with PHP/Laravel.</p>
+                <button class="see-more btn btn-primary"  onclick="openModal('blog2')">
+                    See More <i class="bi bi-arrow-right-circle"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog 3 -->
+      <div class="col-lg-4 col-md-6">
+         <div class="card blog-card h-100">
+               <div class="card-img-container">
+                  <img src="images/rao shreepal-hostin-plan.png" class="card-img-top" alt="Hosting Tips">
+               </div>
+               <div class="card-body">
+                  <h6 class="blog-date">Feb 05, 2025</h6>
+                  <h5 class="blog-title">Choosing the Right Hosting for Your Business</h5>
+                  <p class="blog-desc">Compare shared, VPS, and cloud hosting for your needs.</p>
+                  <button class="see-more btn btn-primary" onclick="openModal('blog3')">
+                     See More <i class="bi bi-arrow-right-circle"></i>
+                  </button>
+               </div>
+         </div>
+      </div>
+      
+      <!-- Blog 4 -->
+      <div class="col-lg-4 col-md-6">
+         <div class="card blog-card h-100">
+               <div class="card-img-container">
+                  <img src="images/rao shreepal ui ux blog.png" class="card-img-top" alt="UI/UX Design">
+               </div>
+               <div class="card-body">
+                  <h6 class="blog-date">Feb 01, 2025</h6>
+                  <h5 class="blog-title">UI/UX Principles for Better Websites</h5>
+                  <p class="blog-desc">Essential design principles to enhance user experience.</p>
+                  <button class="see-more btn btn-primary" onclick="openModal('blog4')">
+                     See More <i class="bi bi-arrow-right-circle"></i>
+                  </button>
+               </div>
+         </div>
+         </div>
+      <!-- Blog 5 -->
+      <div class="col-lg-4 col-md-6">
+         <div class="card blog-card h-100">
+               <div class="card-img-container">
+                  <img src="images/rao-shreepal-Freelancer.png" class="card-img-top" alt="Freelancing Tips">
+               </div>
+               <div class="card-body">
+                  <h6 class="blog-date">Jan 28, 2025</h6>
+                  <h5 class="blog-title">How to Grow as a Freelancer in 2025</h5>
+                  <p class="blog-desc">Tips and strategies to boost your freelancing career.</p>
+                  <button class="see-more btn btn-primary" onclick="openModal('blog5')">
+                     See More <i class="bi bi-arrow-right-circle"></i>
+                  </button>
+               </div>
+         </div>
+         </div>
+
+      <!-- Blog 6 -->
+      <div class="col-lg-4 col-md-6">
+         <div class="card blog-card h-100">
+               <div class="card-img-container">
+                  <img src="images/rao-shreepal-Security -Website.png" class="card-img-top" alt="Website Security">
+               </div>
+               <div class="card-body">
+                  <h6 class="blog-date">Jan 25, 2025</h6>
+                  <h5 class="blog-title">Top Security Tips for Your Website</h5>
+                  <p class="blog-desc">Best practices to secure your website from threats.</p>
+                  <button class="see-more btn btn-primary" onclick="openModal('blog6')">
+                     See More <i class="bi bi-arrow-right-circle"></i>
+                  </button>
+               </div>
+         </div>
+         </div>
+   </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="blogModal" tabindex="-1"  aria-labelledby="blogModalLabel" aria-hidden="true" >
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title fw-bold" id="blogModalLabel">Blog Title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="blogModalContent">
+        Blog content goes here...
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- JS -->
+<script>
+function openModal(blogId) {
+    let title, content;
+    switch(blogId) {
+     case 'blog1':
+    title = '5 Coding Practices for Clean Code';
+    content = `
+        <h2>🖥️ 5 Coding Practices for Clean Code</h2>
+        <p>
+            Writing <span style="color:#2b8a3e; font-weight:bold;">clean code</span> is one of the most important habits for any developer.
+            It makes your project <b>maintainable</b>, <b>scalable</b>, and easy to read for both you and other team members.
+            Follow these golden rules to keep your code professional and bug-free.
+        </p>
+
+        <h3>✅ Key Practices</h3>
+        <ul style="padding-left:20px;">
+            <li>📌 <b>Follow Naming Conventions:</b> Use meaningful, descriptive variable and function names.</li>
+            <li>📌 <b>Keep Functions Small:</b> Each function should do only <i>one specific task</i>.</li>
+            <li>📌 <b>Use Comments Wisely:</b> Explain <u>why</u> something is done, not <u>what</u> is done.</li>
+            <li>📌 <b>Consistent Formatting:</b> Use a linter or code formatter for uniform code style.</li>
+            <li>📌 <b>Refactor Regularly:</b> Continuously improve and simplify your code.</li>
+        </ul>
+
+        <div style="margin-top:20px;">
+            <h3>⚠️ Common Mistakes & Their Solutions</h3>
+            <table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse; width:100%;">
+                <thead style="background:#f4f4f4;">
+                    <tr>
+                        <th>Mistake</th>
+                        <th>Better Approach</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Variable named <code>x</code> for storing user age</td>
+                        <td>Use descriptive name like <code>userAge</code></td>
+                    </tr>
+                    <tr>
+                        <td>Function with 300+ lines of code</td>
+                        <td>Break into smaller functions: <code>validateInput()</code>, <code>processData()</code></td>
+                    </tr>
+                    <tr>
+                        <td>No consistent indentation</td>
+                        <td>Use Prettier or ESLint for auto-formatting</td>
+                    </tr>
+                    <tr>
+                        <td>Over-commenting every single line</td>
+                        <td>Comment only for complex logic or decisions</td>
+                    </tr>
+                    <tr>
+                        <td>Skipping unit testing</td>
+                        <td>Test small parts before merging to main branch</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p style="margin-top:15px;">
+            By applying these practices, you will ensure your codebase remains <b>readable, efficient, and professional</b>.
+            Clean code today saves debugging nightmares tomorrow! 🚀
+        </p>
+    `;
+    break;
+
+
+      case 'blog2':
+    title = '💳 Integrating Razorpay in Your Website — A Complete Guide';
+    content = `
+        <h2>💳 Integrating Razorpay in Your Website — A Complete Guide</h2>
+        <p>
+            Razorpay is one of the most popular and secure payment gateways in India, enabling businesses 
+            to accept payments via cards, UPI, net banking, and wallets. In this guide, we'll cover a 
+            step-by-step integration process along with common mistakes to avoid.
+        </p>
+
+        <h3>🛠 Step-by-Step Integration Process</h3>
+        <ol>
+            <li><strong>Sign Up & Verification:</strong> Create a Razorpay account at <a href="https://razorpay.com" target="_blank">razorpay.com</a> and complete KYC verification.</li>
+            <li><strong>Get API Keys:</strong> Navigate to <em>Settings → API Keys</em> in your Razorpay dashboard and copy your <code>Key ID</code> and <code>Key Secret</code>.</li>
+            <li><strong>Backend Setup:</strong> Use your preferred backend (PHP, Laravel, Node.js, etc.) to create an order with the Razorpay API. This ensures the amount and currency are securely generated on the server side.</li>
+            <li><strong>Frontend Checkout:</strong> Integrate the Razorpay JS Checkout SDK to open a smooth payment popup for your users.</li>
+            <li><strong>Payment Verification:</strong> Once payment is completed, verify the signature on your server to ensure the transaction is secure.</li>
+            <li><strong>Handle Webhooks:</strong> Configure Razorpay webhooks to automatically update payment status in your database without manual checks.</li>
+        </ol>
+
+        <h3>💡 Example: Creating a Razorpay Order in PHP</h3>
+        <pre><code>
+// Install Razorpay PHP SDK via Composer
+// composer require razorpay/razorpay
+
+use Razorpay\Api\Api;
+
+$api = new Api($keyId, $keySecret);
+
+$order = $api->order->create([
+    'receipt'         => 'RCPT#1',
+    'amount'          => 50000, // amount in paise = ₹500
+    'currency'        => 'INR',
+    'payment_capture' => 1
+]);
+        </code></pre>
+
+        <h3>⚠ Common Mistakes & How to Fix Them</h3>
+        <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+            <thead>
+                <tr style="background: #f4f4f4;">
+                    <th>❌ Mistake</th>
+                    <th>✅ Solution</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Creating payment order directly from JavaScript without backend security.</td>
+                    <td>Always create the order on your server to keep API keys safe.</td>
+                </tr>
+                <tr>
+                    <td>Forgetting to verify payment signature.</td>
+                    <td>Use Razorpay's server-side signature verification before marking a payment as successful.</td>
+                </tr>
+                <tr>
+                    <td>Using test keys in production.</td>
+                    <td>Switch to live keys from dashboard after testing is complete.</td>
+                </tr>
+                <tr>
+                    <td>Not handling webhook retries.</td>
+                    <td>Make webhook endpoints idempotent so duplicate calls don't cause issues.</td>
+                </tr>
+                <tr>
+                    <td>Hardcoding currency values.</td>
+                    <td>Always store and pass currency from the backend configuration.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>🚀 Pro Tips for a Smooth Integration</h3>
+        <ul>
+            <li>Test thoroughly in Razorpay’s <strong>Sandbox Mode</strong> before going live.</li>
+            <li>Use clear error messages for failed transactions to improve user trust.</li>
+            <li>Log all payment attempts and webhook events for better debugging.</li>
+            <li>Optimize your checkout page for mobile devices.</li>
+            <li>Keep API keys in <code>.env</code> files, never in public code.</li>
+        </ul>
+
+        <p style="margin-top: 20px; font-style: italic; color: gray;">
+            With proper backend integration, secure verification, and best practices, your Razorpay payments will run 
+            smoothly and securely — giving customers confidence and increasing your conversion rates.
+        </p>
+    `;
+    break;
+
+
+       case 'blog3':
+    title = 'Choosing the Right Hosting for Your Business';
+    content = `
+        <h2>🌐 Choosing the Right Hosting for Your Business</h2>
+        <p>Choosing the right hosting service is crucial for your website's performance, security, and long-term growth. 
+        The right hosting plan ensures faster load times, better uptime, and improved user experience.</p>
+        
+        <h3>Popular Hosting Types:</h3>
+        <ul>
+            <li><strong>Shared Hosting:</strong> Cost-effective and beginner-friendly, but resources are shared with other websites, which may slow performance during peak traffic.</li>
+            <li><strong>VPS Hosting:</strong> Offers dedicated resources within a shared environment, giving better performance and control without the high cost of a dedicated server.</li>
+            <li><strong>Cloud Hosting:</strong> Highly scalable and reliable, using multiple servers to ensure uptime and handle traffic spikes effectively.</li>
+            <li><strong>Dedicated Hosting:</strong> Full server dedicated to your website, offering maximum performance and control, ideal for large businesses.</li>
+            <li><strong>Managed WordPress Hosting:</strong> Optimized for WordPress sites with automatic updates, backups, and enhanced security.</li>
+        </ul>
+        
+        <h3>Key Factors to Consider:</h3>
+        <ol>
+            <li><strong>Uptime Guarantee:</strong> Look for at least 99.9% uptime.</li>
+            <li><strong>Speed & Performance:</strong> Choose SSD storage and CDN support.</li>
+            <li><strong>Security Features:</strong> SSL certificates, malware scanning, and backups.</li>
+            <li><strong>Scalability:</strong> Ability to upgrade resources as your business grows.</li>
+            <li><strong>Customer Support:</strong> 24/7 responsive support via chat, email, or phone.</li>
+            <li><strong>Pricing:</strong> Compare costs but avoid compromising quality for cheap rates.</li>
+        </ol>
+
+        <p>✅ <em>Tip:</em> Always align your hosting choice with your website’s goals, expected traffic, and technical requirements to ensure smooth operations.</p>
+    `;
+    break;
+
+
+        case 'blog4':
+    title = 'UI/UX Principles for Better Websites';
+    content = `
+        <h2>🎨 UI/UX Principles for Better Websites</h2>
+        <p>Good UI/UX design makes websites easier to use, visually appealing, and more engaging for users. 
+        Following the right principles can significantly improve user satisfaction and conversion rates.</p>
+
+        <h3>Core Principles:</h3>
+        <ul>
+            <li><strong>Simple Navigation:</strong> Keep menus clear, avoid clutter, and guide users logically.</li>
+            <li><strong>Consistent Design:</strong> Use the same colors, typography, and button styles across all pages.</li>
+            <li><strong>Mobile Responsiveness:</strong> Ensure your site works well on phones, tablets, and desktops.</li>
+            <li><strong>Accessibility:</strong> Use proper contrast, readable fonts, and alt text for images.</li>
+            <li><strong>Feedback & Iteration:</strong> Test your design, gather user feedback, and keep improving.</li>
+        </ul>
+
+        <h3>Recommended Tools & How to Use Them:</h3>
+        <ul>
+            <li><strong>Figma:</strong> 
+                <ul>
+                    <li>Use for wireframing, prototyping, and collaborative design.</li>
+                    <li>Create interactive prototypes without coding.</li>
+                    <li>Share designs with developers for smoother handoff.</li>
+                </ul>
+            </li>
+            <li><strong>Adobe Photoshop:</strong> 
+                <ul>
+                    <li>Edit and optimize images for web use.</li>
+                    <li>Design custom UI elements like buttons, icons, and banners.</li>
+                    <li>Maintain high-quality visuals with proper compression.</li>
+                </ul>
+            </li>
+            <li><strong>Canva:</strong> 
+                <ul>
+                    <li>Quickly create banners, social media posts, and graphics.</li>
+                    <li>Use pre-made templates for faster workflows.</li>
+                </ul>
+            </li>
+            <li><strong>Zeplin:</strong> 
+                <ul>
+                    <li>Bridge the gap between designers and developers.</li>
+                    <li>Export design specs and assets directly from Figma/Photoshop.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>💡 Pro Tips:</h3>
+        <ul>
+            <li>Always start with a wireframe before jumping into visuals.</li>
+            <li>Use a color palette generator like <em>Coolors</em> to create harmonious colors.</li>
+            <li>Test your design on real devices, not just in the browser.</li>
+            <li>Follow the “less is more” rule — avoid overloading the user.</li>
+        </ul>
+
+        <p><em>By following these principles and leveraging the right tools, 
+        you can create websites that are not just beautiful, but truly user-friendly.</em></p>
+
+      
+                  </p>  
+                  <h3>Key UI/UX Principles:</h3>
+                  <ul>
+                     <li><strong>Consistency:</strong> Maintain a uniform design across all pages.</li>
+                     <li><strong>Responsive Design:</strong> Ensure your site works well on all devices.</li>
+                     <li><strong>Intuitive Navigation:</strong> Make it easy for users to find what they need.</li>
+                     <li><strong>Fast Load Times:</strong> Optimize images and scripts to improve speed.</li>
+                     <li><strong>Accessibility:</strong> Ensure your site is usable for people with disabilities.</li>
+                     <li><strong>Visual Hierarchy:</strong> Use size, color, and layout to guide users' attention.</li>
+                     <li><strong>Feedback:</strong> Provide clear responses to user actions (e.g., form submissions).</li>
+                  </ul>
+                  <h3>Common Mistakes to Avoid:</h3>
+                  <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+                     <thead>
+                        <tr style="background: #f4f4f4;">
+                           <th>❌ Mistake</th>
+                           <th>✅ Solution</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>Overly complex navigation menus</td>
+                           <td>Simplify to 5-7 main categories</td>
+                        </tr>
+                        <tr>
+                           <td>Ignoring mobile users</td>
+                           <td>Implement responsive design</td>
+                        </tr>
+                        <tr>
+                           <td>Slow loading pages</td>
+                           <td>Optimize images and scripts</td>
+                        </tr>
+                        <tr>
+                           <td>Too much text without breaks</td>
+                           <td>Use headings, bullet points, and images</td>
+                        </tr>
+                        <tr>
+                           <td>Lack of clear calls-to-action (CTAs)</td>
+                           <td>Add prominent buttons for key actions</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <p style="margin-top: 20px; font-style: italic; color:
+
+                  gray;">By following these UI/UX principles, you can create a website that not only looks great but also provides an excellent user experience, leading to higher engagement and conversions.</p>
+
+    `;
+    break;
+
+
+     case 'blog5':
+    title = 'How to Grow as a Freelancer in 2025';
+    content = `
+        <h2>💼 How to Grow as a Freelancer in 2025</h2>
+        <p>Freelancing in 2025 is more competitive than ever — but also full of opportunities if you know how to position yourself. Success comes from a mix of <strong>skill mastery</strong>, <strong>smart networking</strong>, and <strong>consistent delivery</strong>.</p>
+        
+        <ol>
+            <li>
+                <strong>1. Build a Strong Portfolio</strong> – Clients judge you in seconds. Make it count.
+                <ul>
+                    <li>Create a visually appealing portfolio using <strong>Behance</strong>, <strong>Dribbble</strong>, or your own <strong>WordPress/Wix site</strong>.</li>
+                    <li>Showcase <em>before & after</em> transformations and write short case studies.</li>
+                    <li>Highlight <strong>measurable results</strong> (e.g., “Increased conversions by 35%”).</li>
+                </ul>
+            </li>
+
+            <li>
+                <strong>2. Network with Potential Clients</strong> – Your network is your net worth.
+                <ul>
+                    <li>Use <strong>LinkedIn</strong> to post insights, client wins, and industry tips.</li>
+                    <li>Join niche communities on <strong>Slack</strong>, <strong>Discord</strong>, <strong>Facebook Groups</strong>, and <strong>Reddit</strong>.</li>
+                    <li>Attend webinars, online events, and virtual meetups in your field.</li>
+                </ul>
+            </li>
+
+            <li>
+                <strong>3. Set Competitive (and Profitable) Rates</strong> – Cheap work attracts cheap clients.
+                <ul>
+                    <li>Research market rates on <strong>Upwork</strong>, <strong>Fiverr</strong>, and <strong>Freelancer.com</strong>.</li>
+                    <li>Offer <strong>tiered packages</strong> (Basic / Standard / Premium).</li>
+                    <li>Communicate your value — don’t just quote a price, explain the ROI.</li>
+                </ul>
+            </li>
+
+            <li>
+                <strong>4. Keep Learning New Skills</strong> – The tools and trends are evolving fast.
+                <ul>
+                    <li>Master trending skills on <strong>Udemy</strong>, <strong>Coursera</strong>, <strong>Skillshare</strong>, or <strong>Frontend Mentor</strong>.</li>
+                    <li>Learn AI tools like <strong>ChatGPT</strong> for copywriting & brainstorming, <strong>MidJourney</strong> for design, and <strong>Canva Pro</strong> for quick visuals.</li>
+                    <li>Stay updated with industry newsletters, podcasts, and YouTube channels.</li>
+                </ul>
+            </li>
+
+            <li>
+                <strong>5. Deliver Projects On Time</strong> – Reliability is your secret weapon.
+                <ul>
+                    <li>Manage work with <strong>Trello</strong>, <strong>Asana</strong>, or <strong>Notion</strong>.</li>
+                    <li>Break projects into milestones and share progress updates with clients.</li>
+                    <li>Always under-promise and over-deliver.</li>
+                </ul>
+            </li>
+        </ol>
+
+        <hr>
+        <h3>📊 Bonus Table – Freelancer Mistakes & How to Fix Them</h3>
+        <table border="1" cellpadding="8" style="border-collapse: collapse; width: 100%; margin-top: 10px;">
+            <thead style="background: #f4f4f4;">
+                <tr>
+                    <th>Mistake</th>
+                    <th>Why It Hurts</th>
+                    <th>Solution</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Accepting too many low-paying projects</td>
+                    <td>Leads to burnout & no growth</td>
+                    <td>Focus on quality clients, raise rates gradually</td>
+                </tr>
+                <tr>
+                    <td>No clear contract</td>
+                    <td>Payment disputes & scope creep</td>
+                    <td>Always sign an agreement before work starts</td>
+                </tr>
+                <tr>
+                    <td>Ignoring personal branding</td>
+                    <td>Blends you into the crowd</td>
+                    <td>Be active on social media, share expertise</td>
+                </tr>
+                <tr>
+                    <td>Missing deadlines</td>
+                    <td>Damages trust & reputation</td>
+                    <td>Use project management tools & buffer time</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><em>💡 Final Tip:</em> In freelancing, <strong>trust is currency</strong>. Deliver on your promises, and clients will market for you without asking.</p>
+    `;
+    break;
+
+
+
+        case 'blog6':
+    title = 'Top Security Tips for Your Website';
+    content = `
+        <h2>🔒 Top Security Tips for Your Website</h2>
+        <p>Website security is not just about avoiding hackers — it’s about protecting your data, your customers, and your reputation. A secure website builds trust, improves SEO rankings, and ensures smooth business operations. Here are some essential tips to keep your website safe in 2025:</p>
+        <ul>
+            <li><strong>Use SSL Certificates:</strong> Secure your site with HTTPS to protect data transfer and improve search rankings.</li>
+            <li><strong>Keep Software Updated:</strong> Regularly update your CMS, plugins, and scripts to patch vulnerabilities.</li>
+            <li><strong>Use Strong & Unique Passwords:</strong> Avoid easy-to-guess passwords and enable two-factor authentication for admin accounts.</li>
+            <li><strong>Enable Firewall Protection:</strong> Use a web application firewall (WAF) to block malicious traffic before it reaches your site.</li>
+            <li><strong>Backup Your Site Regularly:</strong> Maintain automated backups to quickly restore your site in case of an attack or data loss.</li>
+        </ul>
+        <p>💡 <em>Remember:</em> Cyber threats are evolving every day, so website security should never be a one-time task — it’s an ongoing commitment.</p>
+    `;
+    break;
+
+        default:
+            title = 'Blog Title';
+            content = '<p>Blog content goes here...</p>';
+    }
+
+    document.getElementById('blogModalLabel').textContent = title;
+    document.getElementById('blogModalContent').innerHTML = content;
+    $('#blogModal').modal('show');
+}
+</script>
+
+ <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+   </body>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Us</title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+ <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+      <!-- font awesome css -->
+      <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<style>
+
+.contact_section {
+    padding: 60px 0;
+}
+.contact_taital {
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+.contact_taital_1 {
+    color: #007bff;
+}
+.mail_section_1 .form-group {
+    position: relative;
+}
+.mail_section_1 .form-control {
+    padding-left: 40px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    height: 50px;
+}
+.mail_section_1 textarea.form-control {
+    height: auto;
+}
+.mail_section_1 .form-group i {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    color: #007bff;
+}
+.send_bt button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.send_bt button:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
+</style>
+</head>
+<body>
+   
+
+ <div class="contact_section">
+<!-- back to home button with proper style  -->
+ <div class="container">
+    <div class="back_to_home">
+        <a href="index.html" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </div>
+</div>
+      <!-- header section end -->
+      <!-- portfolio section start -->
+     <div class="portfolio_section layout_padding">
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-12">
+            <h1 class="portfolio_taital">My <span class="portfolio_taital_1">Portfolio</span></h1>
+         </div>
+      </div>
+
+      <!-- Project 1 -->
+      <div class="portfolio_section_2">
+         <div class="row align-items-center">
+            <!-- Image -->
+            <div class="col-md-6">
+               <img src="images/aarush.png" alt="Aarush Entertainment" class="img-fluid rounded">
+            </div>
+            <!-- Details -->
+            <div class="col-md-6">
+               <h2>Aarush Entertainment</h2>
+               <p>
+                  A Aarush  entertainment booking platform developed using <strong>Django</strong> and <strong>PostgreSQL</strong>. 
+                  Integrated with <strong>PayPal</strong> for secure payments and hosted on <strong>DigitalOcean</strong> for high performance and reliability.
+               </p>
+               <ul>
+                  <li>🎯 Framework: Django</li>
+                  <li>🗄 Database: PostgreSQL</li>
+                  <li>💳 Payment Gateway: PayPal</li>
+                  <li>☁ Hosting: DigitalOcean</li>
+               </ul>
+               <a target="_blank" href="https://aarushentertainment.com/" class="btn btn-primary mt-2">Visit Website</a>
+               <a  href="contact.html" class="btn btn-outline-primary mt-2">Contact Us</a>
+
+            </div>
+         </div>
+      </div>
+
+      <hr class="my-5">
+
+      <!-- Project 2 -->
+      <div class="portfolio_section_2">
+         <div class="row align-items-center">
+            <!-- Image -->
+            <div class="col-md-6">
+               <img src="images/abizonvisa.png" alt="Abizon Visa" class="img-fluid rounded">
+            </div>
+            <!-- Details -->
+            <div class="col-md-6">
+               <h2>Abizon Visa</h2>
+               <p>
+                  A professional visa application platform built with <strong>Laravel</strong> and <strong>MySQL</strong>. 
+                  Features secure payment integration with <strong>Razorpay</strong> and is hosted on <strong>Hostinger</strong> for scalability and uptime.
+               </p>
+               <ul>
+                  <li>🎯 Framework: Laravel</li>
+                  <li>🗄 Database: MySQL</li>
+                  <li>💳 Payment Gateway: Razorpay</li>
+                  <li>☁ Hosting: Hostinger</li>
+               </ul>
+               <a target="_blank" href="https://abizonvisa.com/" class="btn btn-primary mt-2">Visit Website</a>
+               <a  href="contact.html" class="btn btn-outline-primary mt-2">Contact Us</a>
+            </div>
+         </div>
+      </div>
+
+   </div>
+</div>
+      <!-- portfolio section end -->
+      <!-- footer section start -->
+      
+
+
+<!-- Scripts -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+let captchaVerified = false;
+
+function recaptchaVerified() {
+    captchaVerified = true;
+    checkFormCompletion();
+}
+
+const formInputs = document.querySelectorAll('#contactForm input, #contactForm select, #contactForm textarea');
+formInputs.forEach(input => {
+    input.addEventListener('input', checkFormCompletion);
+});
+
+function checkFormCompletion() {
+    let allFilled = true;
+    formInputs.forEach(input => {
+        if (!input.value.trim()) {
+            allFilled = false;
+        }
+    });
+    document.getElementById('sendBtn').disabled = !(allFilled && captchaVerified);
+}
+</script>
+
+</body>
+</html>
