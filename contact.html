@@ -145,24 +145,25 @@
         </form>
     </div>
 </div>
+<!-- Popup Modal -->
+<div id="popupModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9999; justify-content:center; align-items:center;">
+  <div style="background:#fff; padding:20px; border-radius:8px; max-width:300px; text-align:center; box-shadow:0 0 10px #000;">
+    <p id="popupMessage" style="margin-bottom:20px; font-size:16px;"></p>
+    <button onclick="closePopup()" style="padding:10px 20px; background:#007bff; color:#fff; border:none; border-radius:5px; cursor:pointer;">Close</button>
+  </div>
+</div>
+
 <!-- Load reCAPTCHA and EmailJS -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-<script>
-  // ✅ Declare once
+  <script>
   let captchaVerified = false;
 
-  // reCAPTCHA callback
   function recaptchaVerified() {
     captchaVerified = true;
     checkFormCompletion();
   }
-
-  // Initialize EmailJS (use your public key)
-  (function() {
-    emailjs.init("k70rSQKSDokbuutWg"); // ✅ Replace with your EmailJS public key
-  })();
 
   const form = document.getElementById('contactForm');
   const formInputs = form.querySelectorAll('input, select, textarea');
@@ -182,6 +183,20 @@
     sendBtn.disabled = !(allFilled && captchaVerified);
   }
 
+  function showPopup(message) {
+    document.getElementById('popupMessage').textContent = message;
+    document.getElementById('popupModal').style.display = 'flex';
+  }
+
+  function closePopup() {
+    document.getElementById('popupModal').style.display = 'none';
+  }
+
+  // Initialize EmailJS
+  (function() {
+    emailjs.init("k70rSQKSDokbuutWg"); // Your EmailJS public key
+  })();
+
   form.addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -194,22 +209,21 @@
       message: form.message.value
     };
 
-    // Store data locally
     localStorage.setItem('contact_form', JSON.stringify(formData));
 
-    // Send email via EmailJS
     emailjs.send("service_1mwh2dz", "template_qlekmik", formData)
       .then(function(response) {
-        alert("Message sent successfully!");
+        showPopup("Message sent successfully!");
         form.reset();
         grecaptcha.reset();
         captchaVerified = false;
         sendBtn.disabled = true;
       }, function(error) {
-        alert("Failed to send message. Please try again.");
+        showPopup("Failed to send message. Please try again.\nError: " + (error.text || error));
         console.error(error);
       });
   });
+
 </script>
 
 
