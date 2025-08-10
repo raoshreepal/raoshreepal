@@ -145,45 +145,24 @@
         </form>
     </div>
 </div>
-
-<!-- Scripts -->
+<!-- Load reCAPTCHA and EmailJS -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script>
-let captchaVerified = false;
-
-function recaptchaVerified() {
-    captchaVerified = true;
-    checkFormCompletion();
-}
-
-const formInputs = document.querySelectorAll('#contactForm input, #contactForm select, #contactForm textarea');
-formInputs.forEach(input => {
-    input.addEventListener('input', checkFormCompletion);
-});
-
-function checkFormCompletion() {
-    let allFilled = true;
-    formInputs.forEach(input => {
-        if (!input.value.trim()) {
-            allFilled = false;
-        }
-    });
-    document.getElementById('sendBtn').disabled = !(allFilled && captchaVerified);
-}
-</script>
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-  // Initialize EmailJS
-  (function() {
-    emailjs.init("k70rSQKSDokbuutWg"); // Replace with your actual EmailJS user ID
-  })();
 
+<script>
+  // ✅ Declare once
   let captchaVerified = false;
 
+  // reCAPTCHA callback
   function recaptchaVerified() {
     captchaVerified = true;
     checkFormCompletion();
   }
+
+  // Initialize EmailJS (use your public key)
+  (function() {
+    emailjs.init("k70rSQKSDokbuutWg"); // ✅ Replace with your EmailJS public key
+  })();
 
   const form = document.getElementById('contactForm');
   const formInputs = form.querySelectorAll('input, select, textarea');
@@ -206,7 +185,6 @@ function checkFormCompletion() {
   form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    // Save data to localStorage
     const formData = {
       business_name: form.business_name.value,
       requirement: form.requirement.value,
@@ -215,9 +193,11 @@ function checkFormCompletion() {
       whatsapp: form.whatsapp.value,
       message: form.message.value
     };
+
+    // Store data locally
     localStorage.setItem('contact_form', JSON.stringify(formData));
 
-    // Send email using EmailJS
+    // Send email via EmailJS
     emailjs.send("service_1mwh2dz", "template_qlekmik", formData)
       .then(function(response) {
         alert("Message sent successfully!");
