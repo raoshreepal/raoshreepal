@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Full-Stack & Data Courses — Rao Academy</title>
+  <meta name="description" content="Full Stack, Advanced Python (Django), Data Analysis, Data Science, Machine Learning, Data Structures — course catalog by Rao." />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa7b2; --accent:#06b6d4; --glass: rgba(255,255,255,0.03);
+      --radius:14px; --max:1100px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; background:linear-gradient(180deg,#071226 0%, #081026 60%); color:#e6eef6; -webkit-font-smoothing:antialiased}
+    .container{max-width:var(--max); margin:40px auto; padding:24px}
+
+    header{display:flex;align-items:center;gap:18px}
+    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:700;color:#022;box-shadow:0 6px 20px rgba(3,7,18,0.7)}
+    h1{margin:0;font-size:22px}
+    p.lead{color:var(--muted);margin:6px 0 0}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:22px}
+    .card{background:linear-gradient(180deg,var(--card), rgba(11,17,28,0.6)); padding:20px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(2,6,12,0.7)}
+
+    .features{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+    .pill{background:var(--glass);color:var(--muted);padding:8px 12px;border-radius:999px;font-size:13px}
+
+    .course-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:22px}
+    @media(max-width:900px){.hero{grid-template-columns:1fr} .course-grid{grid-template-columns:1fr}}
+
+    .course{padding:16px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.03);}
+    .course h3{margin:0 0 6px;font-size:18px}
+    .meta{color:var(--muted);font-size:13px;margin-bottom:10px}
+    .syllabus{font-size:14px;color:#dbe9f3}
+    .course .actions{display:flex;gap:8px;margin-top:12px}
+    .btn{background:linear-gradient(90deg,var(--accent),#3b82f6);border:none;padding:10px 12px;border-radius:10px;color:#012;cursor:pointer;font-weight:600}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    aside.card small{display:block;color:var(--muted);margin-bottom:12px}
+    .price{font-size:22px;font-weight:700;color:#dffcff}
+    .cta{display:flex;gap:10px;margin-top:12px}
+
+    .search{display:flex;gap:10px}
+    .search input{flex:1;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+
+    footer{margin-top:38px;text-align:center;color:var(--muted);font-size:14px}
+
+    /* modal */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:none;align-items:center;justify-content:center;padding:20px}
+    .modal{max-width:820px;width:100%;background:#021}{ }
+    .modal-card{background:linear-gradient(180deg,#031028, #071226);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);}
+    .close{background:transparent;border:0;color:var(--muted);font-size:18px;cursor:pointer}
+
+    /* contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:20px}
+    @media(max-width:900px){.contact-grid{grid-template-columns:1fr}}
+    form input, form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;margin-bottom:10px}
+
+    .faq{margin-top:18px}
+    .faq details{background:var(--glass);padding:12px;border-radius:10px;margin-bottom:8px}
+
+    .tag{display:inline-block;background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:8px;font-size:13px;color:var(--muted)}
+
+    .small{font-size:13px;color:var(--muted)}
+  </style>
+</head>
+<body>
+   
+    <!-- create back to my profile button to redirect into index.html -->
+   
+
+ <div class="container">
+  <header>
+    <div class="logo">RAO</div>
+    
+    <div>
+              <a href="index.html" class="btn" style="margin-top:8px; display:inline-block;">⬅ Back to My Profile</a>
+
+      <h1>Rao Academy — Full Stack & Data Programs</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    <header>
+
+      <div class="logo">RAO</div>
+      <div>
+        <h1>Rao Academy — Full Stack & Data Programs</h1>
+        <p class="lead">Practical, project-based courses: from C/C++ to Django, APIs, hosting, ML and data engineering.</p>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h2 style="margin:0 0 8px">Launch your career: Full Stack + Data</h2>
+        <p class="small">Comprehensive training designed for beginners and developers looking to level up. Live sessions, projects, real-world deployments.</p>
+
+        <div class="features" style="margin-top:14px">
+          <span class="pill">Live Mentorship</span>
+          <span class="pill">Projects & Portfolio</span>
+          <span class="pill">Certificate</span>
+          <span class="pill">Job Assistance</span>
+          <span class="pill">Hosting & Deployment</span>
+        </div>
+
+        <div style="margin-top:16px" class="small">
+          <strong>Who this is for:</strong> Beginners, college students, job seekers, and developers who want full-stack + data skills.
+        </div>
+
+        <div class="course-grid">
+          <!-- Course cards -->
+          <div class="course" data-course="Full Stack">
+            <h3>Full Stack Development</h3>
+            <div class="meta">C • C++ • Java • Python • PHP • MySQL • Django • APIs • Hosting & Domain</div>
+            <div class="syllabus">Build backend & frontend projects, design databases, integrate APIs, deploy to live servers.</div>
+            <div class="actions">
+              <button class="btn" data-open="Full Stack">View syllabus</button>
+              <button class="btn ghost" data-enroll="Full Stack">Enroll</button>
+            </div>
+          </div>
+
+          <div class="course" data-course="Advanced Python">
+            <h3>Advanced Python (Django)</h3>
+            <div class="meta">Django, class-based views, REST APIs, authentication, deployment</div>
+            <div class="syllabus">Projects: e-commerce, blog, RESTful APIs, payment integration, Docker & hosting.</div>
+            <div class="actions">
+              <button class="btn" data-open="Advanced Python">View syllabus</button>
+              <button class="btn ghost" data-enroll="Advanced Python">Enroll</button>
+            </div>
+          </div>
+
+          <div class="course" data-course="Data Analysis">
+            <h3>Data Analysis</h3>
+            <div class="meta">Pandas • NumPy • Data cleaning • Visualization</div>
+            <div class="syllabus">Work with real datasets, charts, dashboards, and reporting for business decisions.</div>
+            <div class="actions">
+              <button class="btn" data-open="Data Analysis">View syllabus</button>
+              <button class="btn ghost" data-enroll="Data Analysis">Enroll</button>
+            </div>
+          </div>
+
+          <div class="course" data-course="Data Science">
+            <h3>Data Science</h3>
+            <div class="meta">Exploratory Analysis • Feature Engineering • Model evaluation</div>
+            <div class="syllabus">End-to-end projects from data ingestion to model interpretation and reporting.</div>
+            <div class="actions">
+              <button class="btn" data-open="Data Science">View syllabus</button>
+              <button class="btn ghost" data-enroll="Data Science">Enroll</button>
+            </div>
+          </div>
+
+          <div class="course" data-course="Machine Learning">
+            <h3>Machine Learning</h3>
+            <div class="meta">Supervised • Unsupervised • Model deployment</div>
+            <div class="syllabus">Train models, pipelines, evaluation metrics, and deploy simple ML services.</div>
+            <div class="actions">
+              <button class="btn" data-open="Machine Learning">View syllabus</button>
+              <button class="btn ghost" data-enroll="Machine Learning">Enroll</button>
+            </div>
+          </div>
+
+          <div class="course" data-course="Data Structures">
+            <h3>Data Structures</h3>
+            <div class="meta">Arrays • Linked lists • Trees • Graphs • Algorithms</div>
+            <div class="syllabus">Interview-focused problems and projects to master complexity and performance.</div>
+            <div class="actions">
+              <button class="btn" data-open="Data Structures">View syllabus</button>
+              <button class="btn ghost" data-enroll="Data Structures">Enroll</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <aside class="card">
+        <small>Next batch starting</small>
+        <div class="price">1 Sept 2025</div>
+        <div style="margin-top:8px" class="small">Flexible timings • Weekend & Weekday batches • Recorded lectures available</div>
+
+        <div class="cta">
+          <button class="btn" id="enrollNow">Enroll Now</button>
+          <button class="btn ghost" id="downloadSyllabus">Download Syllabus</button>
+        </div>
+
+        <div style="margin-top:12px">
+          <div class="small"><strong>Contact:</strong></div>
+          <div class="small">WhatsApp / Phone: +91 9549042503</div>
+          <div style="margin-top:8px"><span class="tag">Price on request</span></div>
+        </div>
+
+      </aside>
+    </section>
+
+    <section class="contact-grid">
+      <div class="card">
+        <h3>Get in touch / Enroll</h3>
+        <p class="small">Fill the form and I'll contact you within 24 hours.</p>
+       <form id="contactForm">
+  <input type="text" name="name" placeholder="Your name" required />
+  <input type="email" name="email" placeholder="Email address" required />
+  <input type="tel" name="phone" placeholder="Phone (WhatsApp)" />
+          <select id="courseSelect" name="course"  style="padding:10px;border-radius:8px;margin-bottom:10px;background:transparent;color:#889;border:1px solid rgba(255,255,255,0.04)">
+    <option value="">Select course / interest</option>
+    <option>Full Stack Development</option>
+    <option>Advanced Python (Django)</option>
+    <option>Data Analysis</option>
+    <option>Data Science</option>
+    <option>Machine Learning</option>
+    <option>Data Structures</option>
+  </select>
+  <textarea name="message" rows="4" placeholder="Anything we should know?"></textarea>
+  <button class="btn" type="submit">Send Message</button>
+</form>
+
+      </div>
+
+      <div class="card">
+        <h3>Frequently Asked</h3>
+        <div class="faq">
+          <details><summary>Do you provide placement support?</summary><div class="small">Yes — we assist with resume review, interview preparation and company referrals for eligible students.</div></details>
+          <details><summary>Are recordings available?</summary><div class="small">Yes, all sessions are recorded and shared with enrolled students.</div></details>
+          <details><summary>What are the prerequisites?</summary><div class="small">No strict prerequisites for beginner tracks. For advanced tracks, basic programming knowledge is recommended.</div></details>
+        </div>
+
+        <h4 style="margin-top:12px">Testimonials</h4>
+        <div class="small">"Great hands-on projects — I got a job within 2 months." — Aman</div>
+        <div class="small" style="margin-top:6px">"Practical Django & deployment. Rao sir is patient and clear." — Priya</div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© Rao Academy · Built for learners • Tailored mentorship & projects</div>
+    </footer>
+  </div>
+
+  <!-- Modal (hidden) -->
+  <div id="modal" class="modal-backdrop" role="dialog" aria-hidden="true">
+    <div class="modal-card card" role="document">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h3 id="modalTitle">Syllabus</h3>
+        <button class="close" id="closeModal">✕</button>
+      </div>
+      <div id="modalBody" style="margin-top:10px;color:var(--muted)"></div>
+      <div style="margin-top:12px;text-align:right">
+        <button class="btn" id="modalEnroll">Enroll in this course</button>
+      </div>
+    </div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <script>
+    // Syllabus content (simple structured bullets)
+    const SYLLABI = {
+      'Full Stack': `Core: C/C++ fundamentals, Java basics, Python & PHP for backend, MySQL design, Django projects, REST APIs, frontend (HTML/CSS/JS), deployment (shared, VPS), DNS & domain setup, final capstone project.`,
+      'Advanced Python': `Deep Django: Class-based views, ORM patterns, auth, permissions, DRF, async tasks (Celery), testing,  payments, deployment to Linux servers.`,
+      'Data Analysis': `Pandas, NumPy, data cleaning, aggregation, time-series, Matplotlib/Plotly, reporting & dashboards, exploratory projects.`,
+      'Data Science': `Feature engineering, statistical analysis, model selection, cross-validation, model explainability, end-to-end projects.`,
+      'Machine Learning': `Supervised & unsupervised ML, sklearn, pipeline creation, hyperparameter tuning, model deployment basics.`,
+      'Data Structures': `Complexities, arrays, linked-lists, stacks, queues, trees, graphs, sorting, hashing, interview-style problems.`
+    };
+
+    // open modal
+    document.querySelectorAll('[data-open]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const key = btn.getAttribute('data-open');
+        openModal(key);
+      });
+    });
+
+    document.getElementById('closeModal').addEventListener('click', closeModal);
+    document.getElementById('modal').addEventListener('click', (e)=>{ if(e.target.id==='modal') closeModal(); });
+
+    function openModal(key){
+      document.getElementById('modalTitle').textContent = key + ' — Syllabus';
+      document.getElementById('modalBody').textContent = SYLLABI[key] || 'Syllabus coming soon.';
+      const modal = document.getElementById('modal'); modal.style.display='flex'; modal.setAttribute('aria-hidden','false');
+      document.getElementById('modalEnroll').setAttribute('data-enroll', key);
+    }
+    function closeModal(){ document.getElementById('modal').style.display='none'; document.getElementById('modal').setAttribute('aria-hidden','true'); }
+
+    // Enroll flow: focus contact form and prefill course
+    function prefillAndScroll(course){
+      document.getElementById('courseSelect').value = course === 'Full Stack' ? 'Full Stack Development' : course;
+      document.getElementById('name').focus();
+      window.scrollTo({top: document.getElementById('contactForm').offsetTop - 20, behavior:'smooth'});
+    }
+
+    document.querySelectorAll('[data-enroll]').forEach(btn=> btn.addEventListener('click', ()=> prefillAndScroll(btn.getAttribute('data-enroll'))));
+    document.getElementById('enrollNow').addEventListener('click', ()=> prefillAndScroll('Full Stack'));
+    document.getElementById('modalEnroll').addEventListener('click', (e)=>{ prefillAndScroll(e.target.getAttribute('data-enroll') || document.getElementById('modalTitle').textContent); closeModal(); });
+
+    // contact form submit (simple simulation)
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const course = document.getElementById('courseSelect').value;
+      if(!name || !email){ alert('Please enter name and email'); return; }
+      // simulated send
+      alert('Thank you, ' + name + '! Your request for "' + (course || 'General') + '" has been received. I will contact you soon.');
+      this.reset();
+    });
+
+    // Download syllabus (generate text file)
+    document.getElementById('downloadSyllabus').addEventListener('click', ()=>{
+      let text = 'Rao Academy - Course Syllabi\n\n';
+      for(const k in SYLLABI){ text += k + '\n' + SYLLABI[k] + '\n\n'; }
+      const blob = new Blob([text], {type:'text/plain'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = 'Rao_Academy_Syllabi.txt'; document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+    });
+  (function() {
+    emailjs.init("k70rSQKSDokbuutWg"); // Public key from EmailJS dashboard
+  })();
+
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const form = this;
+
+    emailjs.sendForm('service_ot3sth9', 'template_zmvxnji', form)
+      .then(function() {
+        alert('✅ Your inquiry has been sent successfully!');
+        form.reset();
+      }, function(error) {
+        console.error('FAILED...', error);
+        alert('❌ Failed to send message. Please try again.');
+      });
+  });
+
+
+
+  </script>
+</body>
+</html>

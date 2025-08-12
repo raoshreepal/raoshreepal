@@ -200,18 +200,18 @@
   form.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    const formData = {
-      business_name: form.business_name.value,
-      requirement: form.requirement.value,
-      name: form.name.value,
-      email: form.email.value,
-      whatsapp: form.whatsapp.value,
-      message: form.message.value
-    };
+   const formData = {
+  business_name: form.business_name.value,
+  requirement: form.requirement.value,
+  name: form.name.value,
+  email: form.email.value,
+  whatsapp: form.whatsapp.value,
+  message: form.message.value
+};
 
     localStorage.setItem('contact_form', JSON.stringify(formData));
 
-    emailjs.send("service_1mwh2dz", "template_qlekmik", formData)
+    emailjs.send("service_1mwh2dz","template_sva935s",formData)
       .then(function(response) {
         showPopup("Message sent successfully!");
         form.reset();
