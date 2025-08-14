@@ -1,4 +1,4 @@
-<h2 align="left">Hi 👋! My name is Rao shreepal  and I'm a Backend Developer, from Ahmedabad </h2>
+<h2 align="left">Hi 👋! My name is Rao Shreepal  and I'm a Backend Developer, from Ahmedabad, Gujarat </h2>
 
 ###
 
